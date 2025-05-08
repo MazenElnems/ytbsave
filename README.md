@@ -6,8 +6,7 @@
 
 ## 🌐 Demo
 
-- 🔆 Light Theme: [https://theofficialvkr.github.io/Ytbsave/](https://theofficialvkr.github.io/Ytbsave/)
-- 🌑 Dark Theme: [https://theofficialvkr.github.io/Ytbsave/dark.html](https://theofficialvkr.github.io/Ytbsave/dark.html)
+- 🔆 Light Theme: [https://MazenElnems.github.io/ytbsave/](https://MazenElnems.github.io/ytbsave/)
 
 ---
 
@@ -53,19 +52,3 @@ YTBSave now includes a lightweight **admin dashboard**:
 4. Visit [http://localhost/Ytbsave](http://localhost/Ytbsave) in your browser.
 
 ---
-
-## ☕ Support Me
-
-Help keep the project alive:
-
-[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=theofficialvkr&button_colour=BD5FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00)](https://www.buymeacoffee.com/theofficialvkr)  
-[![PayPal](https://www.paypalobjects.com/images/Debit_Credit_APM.svg)](https://www.paypal.com/ncp/payment/4C9YTYAMKYVZS)
-
----
-
-## 📡 API Documentation
-
-You can programmatically download videos using the API:
-
-### Endpoint
-
