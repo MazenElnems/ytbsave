@@ -1,0 +1,71 @@
+# YTBSave
+
+**YTBSave** is a free video downloader originally built by [@TheOfficialVKr](https://instagram.com/theofficialvkr). It allows users to download videos from YouTube, Facebook, Instagram, TikTok, and many other platforms.
+
+---
+
+## 🌐 Demo
+
+- 🔆 Light Theme: [https://theofficialvkr.github.io/VKrDownloader/](https://theofficialvkr.github.io/VKrDownloader/)
+- 🌑 Dark Theme: [https://theofficialvkr.github.io/VKrDownloader/dark.html](https://theofficialvkr.github.io/VKrDownloader/dark.html)
+
+---
+
+## 📹 Supported Platforms
+
+You can download videos from:
+
+- YouTube
+- Facebook
+- Twitter
+- Instagram (Reels)
+- TikTok
+- 1000+ other websites in multiple video/audio quality options
+
+---
+
+## 📊 Admin Dashboard (New)
+
+YTBSave now includes a lightweight **admin dashboard**:
+
+- View total site visits and video downloads
+- See the latest 5 downloaded videos
+- Login protected via JSON-based credentials
+
+> Admin access is available via the **Dashboard** button in the main UI.
+
+---
+
+## ⚙️ How to Install
+
+1. Upload the ZIP files to your server or hosting platform.
+2. Unzip the files using your hosting file manager.
+3. No backend setup needed for front-end — works on almost all free or paid hosting.
+4. Open your site and enjoy YTBSave!
+
+---
+
+## 🔧 How to Run Locally
+
+1. Install a local server like **XAMPP**, **MAMP**, or **Laragon**.
+2. Place the project folder inside the `htdocs` directory (e.g., `htdocs/YTBSave`).
+3. Start Apache from your server software.
+4. Visit [http://localhost/YTBSave](http://localhost/YTBSave) in your browser.
+
+---
+
+## ☕ Support Me
+
+Help keep the project alive:
+
+[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=theofficialvkr&button_colour=BD5FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00)](https://www.buymeacoffee.com/theofficialvkr)  
+[![PayPal](https://www.paypalobjects.com/images/Debit_Credit_APM.svg)](https://www.paypal.com/ncp/payment/4C9YTYAMKYVZS)
+
+---
+
+## 📡 API Documentation
+
+You can programmatically download videos using the API:
+
+### Endpoint
+

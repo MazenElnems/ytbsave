@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="title" content="Ytbsave - Powerful Video Downloader and Online Tools">
+    <meta name="description" content="Download videos easily from various platforms with Ytbsave. Your all-in-one video downloading and online tools solution.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Ytbsave, video downloader, download videos, online tools">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Vijay Kumar">
+    <meta property="og:title" content="Ytbsave - Download Videos Easily and Quickly">
+    <meta property="og:description" content="Ytbsave makes downloading videos easy and quick. Get started now with this powerful tool.">
+    <meta property="og:image" content="/Ytbsave/logo.png">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Ytbsave - Easy Video Downloads">
+    <meta name="twitter:description" content="Use Ytbsave for quick and easy video downloads from various platforms.">
+    <meta name="twitter:image" content="/Ytbsave/logo.png">    
+    <link rel="icon" href="/Ytbsave/logo.png" sizes="32x32" type="image/png">
+    <link rel="shortcut icon" href="/Ytbsave/logo.png" type="image/x-icon">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="manifest" href="/Ytbsave/manifest.webmanifest">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.3/purify.min.js" integrity="sha512-Ll+TuDvrWDNNRnFFIM8dOiw7Go7dsHyxRp4RutiIFW/wm3DgDmCnRZow6AqbXnCbpWu93yM1O34q+4ggzGeXVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Ytbsave: Download Videos / Audio Online From Any Site</title>
+    
+    <!--
+
+        ADS START 
+    -->
+    
+        <!--
+
+        ADS END
+    -->
+    
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="logo.png" alt="Ytbsave Logo" class="me-2">
+                <span>Ytbsave</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features"><i class="fas fa-star"></i> Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-text animate__animated animate__fadeInLeft">
+                    <h1>Download Videos From Anywhere</h1>
+                    <p>Free, fast, and easy video downloading from YouTube, Facebook, Instagram, TikTok, and 1000+ other sites.</p>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight">
+                    <div class="downloader-card">
+                        <h2>Paste your video link</h2>
+                        <div class="input-group mb-3">
+                            <input id="inputUrl" type="url" class="form-control" placeholder="https://www.youtube.com/watch?v=..." aria-label="Video URL">
+                            <button id="downloadBtn" class="btn btn-primary" type="button">
+                                <i class="fas fa-download me-2"></i>Download
+                            </button>
+                        </div>
+                        <div id="errorMessage" class="alert alert-danger mt-3" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Animation -->
+    <div id="loading" class="text-center mt-4" style="display: none;">
+        <div class="loading-animation">
+            <div class="loader">
+                <svg class="circular" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"/>
+                </svg>
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loading-text mt-3">Finding download options...</p>
+        </div>
+    </div>
+
+    <!-- Results Container -->
+    <div class="container mt-4">
+        <div id="container" class="result-container animate__animated animate__fadeIn" style="display: none;">
+            <div class="row">
+                <div class="col-md-4">
+                    <div id="thumb" class="video-thumbnail mb-3"></div>
+                </div>
+                <div class="col-md-8">
+                    <div id="title" class="video-title"></div>
+                    <div id="description" class="video-description mt-2"></div>
+                    <div class="video-meta mt-3">
+                        <div id="uploader" class="video-uploader"></div>
+                        <div id="duration" class="video-duration"></div>
+                        <div id="extractor" class="video-source"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="download-options mt-4">
+                <h3>Download Options</h3>
+                <div id="download" class="download-buttons"></div>
+            </div>
+            <!-- Download Progress Container -->
+            <div id="downloadProgress" class="download-progress mt-4" style="display: none;">
+                <h4 id="downloadTitle" class="mb-2"></h4>
+                <div class="progress">
+                    <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                </div>
+                <p id="downloadStatus" class="mt-2 text-center"></p>
+                <div id="downloadActions" class="text-center mt-3">
+                    <button id="cancelDownload" class="btn btn-sm btn-danger"><i class="fas fa-times"></i> Cancel</button>
+                    <a id="directDownloadLink" href="#" class="btn btn-sm btn-success" style="display: none;"><i class="fas fa-download"></i> Download Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Our Features</h2>
+                <p>Why choose Ytbsave for your video downloads</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Fast Downloads</h3>
+                        <p>Download videos at maximum speed without any throttling or limitations.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Multi-Platform Support</h3>
+                        <p>Download from YouTube, Facebook, Instagram, TikTok, and 1000+ other sites.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>High Quality</h3>
+                        <p>Choose from multiple quality options including HD 1080p and 4K videos.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Audio Extraction</h3>
+                        <p>Extract audio from videos and download as MP3 files easily.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Secure & Private</h3>
+                        <p>We don't store your videos or personal information on our servers.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Friendly</h3>
+                        <p>Works perfectly on all devices including smartphones and tablets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about our video downloader</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Why can't I download some videos?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Some videos might be protected by copyright restrictions or special encryption that prevents downloading. Additionally, platforms occasionally update their systems to prevent downloading. We continuously update our service to keep up with these changes, but some videos may temporarily be unavailable for download.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Is this service free?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, Ytbsave is completely free to use. There are no hidden charges or subscription fees. We may display some advertisements to support the service, but all download features are available at no cost.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Can I download from any site?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ytbsave supports over 1000 websites including YouTube, Facebook, Instagram, Twitter, TikTok, and many more. However, not all websites are supported. If you find a site that isn't working, please contact us through the form below and we'll try to add support for it.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Is it legal to download videos?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The legality of downloading videos varies by country and depends on the content's copyright status. Generally, downloading videos for personal use is acceptable in many places, but redistributing copyrighted content without permission is illegal. Always respect copyright laws and the terms of service of the platform you're downloading from.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    What's the highest quality I can download?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ytbsave provides all available quality options that the original video offers. For YouTube, this can go up to 4K (2160p) if the original video is available in that quality. For other platforms, it depends on what quality options they provide.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Contact Us</h2>
+                <p>Have questions or feedback? Get in touch with us</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Type your message here..." required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane me-2"></i>Send Message</button>
+                            </div>
+                        </form>
+                        <div id="formSuccess" class="alert alert-success mt-3" style="display: none;">
+                            Your message has been sent successfully. We'll get back to you soon!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="footer-info">
+                        <h3>Ytbsave</h3>
+                        <p>Your go-to solution for downloading videos from your favorite platforms. Fast, free, and easy to use.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-newsletter">
+                        <h4>Subscribe</h4>
+                        <p>Stay updated with our latest features and updates</p>
+                        <form>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Your email" aria-label="Your email">
+                                <button class="btn btn-primary" type="button">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center mt-4">
+                <p>&copy; 2023 Ytbsave. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/Ytbsave/sw.js').then(() => {
+                console.log('Service Worker Registered');
+            });
+        }
+        
+        // Track page visit
+        fetch('track.php?action=visit', { method: 'POST' })
+          .then(response => response.json())
+          .catch(error => console.error('Error tracking visit:', error));
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://vkrdownloader.xyz/static/js/devdata.js"></script>
+    <script type="text/javascript" src="javascript.js"></script>
+</body>
+
+</html>
