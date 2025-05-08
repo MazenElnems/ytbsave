@@ -6,8 +6,8 @@
 
 ## 🌐 Demo
 
-- 🔆 Light Theme: [https://theofficialvkr.github.io/VKrDownloader/](https://theofficialvkr.github.io/VKrDownloader/)
-- 🌑 Dark Theme: [https://theofficialvkr.github.io/VKrDownloader/dark.html](https://theofficialvkr.github.io/VKrDownloader/dark.html)
+- 🔆 Light Theme: [https://theofficialvkr.github.io/Ytbsave/](https://theofficialvkr.github.io/Ytbsave/)
+- 🌑 Dark Theme: [https://theofficialvkr.github.io/Ytbsave/dark.html](https://theofficialvkr.github.io/Ytbsave/dark.html)
 
 ---
 
@@ -48,9 +48,9 @@ YTBSave now includes a lightweight **admin dashboard**:
 ## 🔧 How to Run Locally
 
 1. Install a local server like **XAMPP**, **MAMP**, or **Laragon**.
-2. Place the project folder inside the `htdocs` directory (e.g., `htdocs/YTBSave`).
+2. Place the project folder inside the `htdocs` directory (e.g., `htdocs/Ytbsave`).
 3. Start Apache from your server software.
-4. Visit [http://localhost/YTBSave](http://localhost/YTBSave) in your browser.
+4. Visit [http://localhost/Ytbsave](http://localhost/Ytbsave) in your browser.
 
 ---
 
