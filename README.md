@@ -4,12 +4,6 @@
 
 ---
 
-## 🌐 Demo
-
-- 🔆 Light Theme: [https://MazenElnems.github.io/ytbsave/](https://MazenElnems.github.io/ytbsave/)
-
----
-
 ## 📹 Supported Platforms
 
 You can download videos from:
